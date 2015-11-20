@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Got A Job?</title>
+
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+	.container {
+    	background-color: #4c6297;
+    	color: #fff;
+    	margin: 60px 0 0;
+    	padding: 20px 0;
+    	text-align: center;
+    	width: 100%;
+	}
+	.container .lead {
+    	color: #eee;
+	}
+	h1 {
+		font-size: 20px;
+		margin: 10px;
+	}
+	h2 {
+		font-size: 28px;
+		margin-bottom: 20px;
+	}
+    </style>
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <div>
+        <h1>Do I still Have a job?</h1>
+        <h2 id="answer"></h2>
+        <p><a class="btn btn-lg btn-primary" id="button" href="javascript:checkJob()" role="button">Let's check</a></p>
+      </div>
+
+    </div>
+  </body>
+
+  <script>
+  	var answers = ["It is certain", "It is decidedly so", "Without a doubt", "Yes definitely", "You may rely on it", "As I see it, yes", "Most likely", "Outlook good", "Yes", "Signs point to yes", "Reply hazy try again", "Ask again later", "Better not tell you now", "Cannot predict now", "Concentrate and ask again", "Don't count on it", "My reply is no", "My sources say no", "Outlook not so good", "Very doubtful"];
+
+  	function checkJob() {
+  		document.getElementById("answer").innerHTML = answers[Math.floor(Math.random() * answers.length)];
+  		document.getElementById("button").innerHTML = "Better check again";
+  	}
+  </script>
+</html>
